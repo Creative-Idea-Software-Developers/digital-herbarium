@@ -18,7 +18,7 @@ use App\Http\Controllers\main;
 Route::get('/', [main::class,'index']);
 
 Route::get('/resources/{filename}', function($filename){
-    $path = storage_path() . '\app\photos\\' . $filename;
+    $path = storage_path() . '/app/photos/' . $filename;
 
     if(!File::exists($path)) {
         return response()->json(['message' => 'Image not found.'.$path], 404);
