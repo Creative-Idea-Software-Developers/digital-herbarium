@@ -1,0 +1,1 @@
+<img src="{{ url('resources','icono.png') }}" width="50" height="50"/>
