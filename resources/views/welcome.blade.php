@@ -708,10 +708,10 @@ button:focus {
 	@foreach ($plantas as $planta)
 		datos.push({
 			id: {{ $planta->id }},
-			name: '{{ $planta->name }}',
-			description: '{{ $planta->description }}',
-			image: '{{ $planta->image }}',
-			property: '{{$planta->user->name}}'
+			name: `{{ $planta->name }}`,
+			description: `{{ $planta->description }}`,
+			image: `{{ $planta->image }}`,
+			property: `{{$planta->user->name}}`
 		});
 	@endforeach
 
