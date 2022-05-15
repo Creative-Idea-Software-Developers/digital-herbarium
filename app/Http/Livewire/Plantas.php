@@ -36,13 +36,14 @@ class Plantas extends Component
     }
 
     public function limpiarCampos(){
-        $this->descripcion = "";
+        $this->idPlanta = null;
+        $this->description = "";
         $this->name = "";
         $this->image = "";
-        $this->id = "";
     }
 
     public function editar($id){
+        $this->limpiarCampos();
         $planta = Planta::findOrFail($id);
         $this->idPlanta = $planta->id;
         $this->name = $planta->name;
