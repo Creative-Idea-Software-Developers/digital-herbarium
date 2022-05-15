@@ -39,7 +39,7 @@ class Plantas extends Component
         $this->idPlanta = null;
         $this->description = "";
         $this->name = "";
-        $this->image = "";
+        $this->image = null;
     }
 
     public function editar($id){
