@@ -561,57 +561,57 @@ button:focus {
 			@if (count($plantas)>=3)
 			<div class="info current--info">
 				<h1 class="text name name_actual">{{$plantas[0]->name}}</h1>
-				<h4 class="text location location_actual">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location location_actual">BY GRUPO 02</h4>
 				<p class="text description description_actual" style = "white-space: normal">{{$plantas[0]->description}}</p>
 			</div>
 
 			<div class="info next--info">
 				<h1 class="text name">{{$plantas[1]->name}}</h1>
-				<h4 class="text location">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location">BY GRUPO 02</h4>
 				<p class="text description">{{$plantas[1]->description}}</p>
 			</div>
 
 			<div class="info previous--info">
 				<h1 class="text name">{{$plantas[count($plantas)-1]->name}}</h1>
-				<h4 class="text location">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location">BY GRUPO 02</h4>
 				<p class="text description">{{$plantas[count($plantas)-1]->description}}</p>
 			</div>
 			@endif
 			@if (count($plantas)==2)
 			<div class="info current--info">
 				<h1 class="text name name_actual">{{$plantas[0]->name}}</h1>
-				<h4 class="text location location_actual">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location location_actual">BY GRUPO 02</h4>
 				<p class="text description description_actual" style = "white-space: normal">{{$plantas[0]->description}}</p>
 			</div>
 
 			<div class="info next--info">
 				<h1 class="text name">{{$plantas[1]->name}}</h1>
-				<h4 class="text location">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location">BY GRUPO 02</h4>
 				<p class="text description">{{$plantas[1]->description}}</p>
 			</div>
 
 			<div class="info previous--info">
 				<h1 class="text name">{{$plantas[1]->name}}</h1>
-				<h4 class="text location">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location">BY GRUPO 02</h4>
 				<p class="text description">{{$plantas[1]->description}}</p>
 			</div>
 			@endif
 			@if (count($plantas)==1)
 			<div class="info current--info">
 				<h1 class="text name name_actual">{{$plantas[0]->name}}</h1>
-				<h4 class="text location location_actual">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location location_actual">BY GRUPO 02</h4>
 				<p class="text description description_actual" style = "white-space: normal">{{$plantas[0]->description}}</p>
 			</div>
 
 			<div class="info next--info">
 				<h1 class="text name">{{$plantas[0]->name}}</h1>
-				<h4 class="text location">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location">BY GRUPO 02</h4>
 				<p class="text description">{{$plantas[0]->description}}</p>
 			</div>
 
 			<div class="info previous--info">
 				<h1 class="text name">{{$plantas[0]->name}}</h1>
-				<h4 class="text location">By {{$plantas[0]->user->name}}</h4>
+				<h4 class="text location">BY GRUPO 02</h4>
 				<p class="text description">{{$plantas[0]->description}}</p>
 			</div>
 			@endif
@@ -722,13 +722,12 @@ button:focus {
 	})
 	desc = arra.join('')
 	desc = desc.replace(/\n/g, "<br>");
-	console.log(desc);
 		datos.push({
 			id: {{ $planta->id }},
 			name: `{{ $planta->name }}`,
 			description: desc,
 			image: `{{ $planta->image }}`,
-			property: `{{$planta->user->name}}`
+			property: `BY GRUPO 02`
 		});
 	@endforeach
 
