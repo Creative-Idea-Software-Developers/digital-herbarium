@@ -704,12 +704,13 @@ button:focus {
 
 	let datos = [];
 	let index = 0;
-
+	let desc;
 	@foreach ($plantas as $planta)
+	 desc = `{{$planta->description}}`;
 		datos.push({
 			id: {{ $planta->id }},
 			name: `{{ $planta->name }}`,
-			description: `{{ $planta->description }}`,
+			description: desc.replace(/\n/g, "<br>"),
 			image: `{{ $planta->image }}`,
 			property: `{{$planta->user->name}}`
 		});
