@@ -705,8 +705,18 @@ button:focus {
 	let datos = [];
 	let index = 0;
 	let desc;
+	let arra = [];
+	let aux
 	@foreach ($plantas as $planta)
 	 desc = `{{$planta->description}}`;
+	arra = desc.split(/\n/g);
+	arra = arra.map(x=>{
+		if(x.length>=100){
+			aux = x.substring(0,100)+/\n/g;
+			x= aux+x.substring(100,x.length);
+		}
+	})
+	desc = arra.join('')
 		datos.push({
 			id: {{ $planta->id }},
 			name: `{{ $planta->name }}`,
