@@ -709,18 +709,24 @@ button:focus {
 	let aux
 	@foreach ($plantas as $planta)
 	 desc = `{{$planta->description}}`;
-	arra = desc.split(/\n/g);
+	arra = desc.split('/\n/g');
 	arra = arra.map(x=>{
-		if(x.length>=100){
-			aux = x.substring(0,100)+/\n/g;
-			x= aux+x.substring(100,x.length);
+		if(x.length>=80){
+			aux = x.substring(0,80)+'\n';
+			for(let i=80;i<x.length;i+=80){
+				aux+=x.substring(i,i+80)+'\n';
+			}
+			x=aux
 		}
+		return x
 	})
 	desc = arra.join('')
+	desc = desc.replace(/\n/g, "<br>");
+	console.log(desc);
 		datos.push({
 			id: {{ $planta->id }},
 			name: `{{ $planta->name }}`,
-			description: desc.replace(/\n/g, "<br>"),
+			description: desc,
 			image: `{{ $planta->image }}`,
 			property: `{{$planta->user->name}}`
 		});
